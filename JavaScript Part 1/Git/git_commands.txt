@@ -1,0 +1,4 @@
+git checkout -b branchname //To ceate a new branch
+git push --set-upstream origin branchname //To push the new branch
+git diff filename //differences between the working directory and the staging area with
+git log //used to refer back to an earlier version of a project
