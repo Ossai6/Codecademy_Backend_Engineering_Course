@@ -1,0 +1,46 @@
+//Events Module
+Events Module
+The Events module allows you to communicate between different parts of your application using events.
+
+EventEmitter
+An EventEmitter is an object that can send and receive events. Think of it like a radio station:
+
+- When you want to send a message (event), you use the .emit() method.
+- When you want to receive a message (event), you use the .on() method.
+
+.emit() Method
+The .emit() method sends an event to all listeners. It's like broadcasting a message on the radio:
+
+
+const EventEmitter = require('events');
+const radio = new EventEmitter();
+
+radio.emit('music', 'Song is playing!');
+
+
+In this example, we're sending a 'music' event with the message 'Song is playing!'.
+
+.on() Method
+The .on() method listens for a specific event. It's like tuning into your favorite radio station:
+
+
+const EventEmitter = require('events');
+const radio = new EventEmitter();
+
+radio.on('music', (message) => {
+  console.log(message); // Output: Song is playing!
+});
+
+radio.emit('music', 'Song is playing!');
+
+
+In this example, we're listening for the 'music' event and logging the message to the console when it's received.
+
+
+//INPUT-OUTPUT
+INPUT
+process.stdin.on('data', (userInput) => {
+  let input = userInput.toString()
+  console.log(input)
+});
+
